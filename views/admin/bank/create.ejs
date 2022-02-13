@@ -1,0 +1,64 @@
+<%- include ../../partials/header.ejs %> <%- include ../../partials/navbar.ejs %> <%- include ../../partials/sidebar.ejs %>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Nominal</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/nominal">Nominal</a></li>
+            <li class="breadcrumb-item active">Add</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Form Nominal</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form method="POST" action="/bank/create"> 
+                  <div class="card-body">
+                    
+                    <div class="form-group">
+                      <label for="name">Account Name</label>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Insert Account Name" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="bankName">Bank Name</label>
+                      <input name="bankName" type="text" class="form-control" id="bankName" placeholder="Insert Bank Name" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="accountNumber">Account Number</label>
+                      <input name="accountNumber" type="text" class="form-control" id="bankNumber" placeholder="Insert Bank Number" required />
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<%- include ../../partials/footer.ejs %> <%- include ../../partials/js.ejs %>
