@@ -21,7 +21,7 @@ module.exports = {
   detailPage: async (req, res) => {
     try {
       const { id } = req.params;
-      const voucher = await Voucher.findOne({ _id: id }).populate("category").populate("nominals").populate("user", "_id name phoneNumber");
+      const voucher = await Voucher.findOne({ _id: id }).populate("category").populate("nominals").populate("user", "_id name phoneNumber").populate("payment");
 
       if (!voucher) {
         return res.status(404).json({ message: "Voucher Not Found" });
